@@ -1,8 +1,26 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Heebo, Montserrat, Kalam } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
 
-const inter = Inter({ subsets: ["latin"] });
+const heebo = Heebo({
+  subsets: ["latin"],
+  variable: '--font-heebo',
+  display: 'swap',
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: '--font-montserrat',
+  display: 'swap',
+});
+
+const kalam = Kalam({
+  subsets: ["latin"],
+  variable: '--font-kalam',
+  weight: "400",
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +33,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-br">
+      <body className={`${heebo.variable} ${montserrat.variable} ${kalam.variable}`}>
+        <Header />
+
+        <div className={'children'}>
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
