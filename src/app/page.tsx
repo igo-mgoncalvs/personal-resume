@@ -10,8 +10,12 @@ import react from '@/assets/react.svg'
 import nodejs from '@/assets/nodejs.svg'
 import android from '@/assets/android.svg'
 import apple from '@/assets/apple.svg'
+import photo from '@/assets/Photo.png'
+import github from '@/assets/github.svg'
+import linkeding from '@/assets/linkeding.svg'
 
 import styles from './styles.module.scss'
+import Form from '@/components/from';
 
 export default function Home() {
   const icons = [
@@ -176,6 +180,72 @@ export default function Home() {
               {mockdata.aboutMe.button}
             </p>
           </button>
+        </div>
+      </div>
+
+      <div
+        className={styles.contact_container}
+      >
+        <p
+          className={styles.title}
+        >
+          Contact
+        </p>
+
+        <div
+          className={styles.container}
+        >
+          <div
+            className={styles.infos}
+          >
+            <Image
+              alt='image'
+              src={photo}
+              className={styles.image}
+            />
+
+            <div
+              className={styles.text_container}
+            >
+              <div>
+                <p
+                  className={styles.title}
+                >
+                  {mockdata.contact.title}
+                </p>
+                <p
+                  className={styles.subtitle}
+                >
+                  {mockdata.contact.subtitle}
+                </p>
+              </div>
+
+              <p
+                className={styles.description}
+              >
+                {mockdata.contact.description1}
+                <b className={styles.email}> {mockdata.contact.email} </b>
+                {mockdata.contact.description2}
+              </p>
+
+              <div
+                className={styles.icons}
+              >
+                <Image
+                  alt='github'
+                  src={github}
+                  className={styles.icon}
+                />
+                <Image
+                  alt='linkeding'
+                  src={linkeding}
+                  className={styles.icon}
+                />
+              </div>
+            </div>
+          </div>
+
+          <Form />
         </div>
       </div>
     </main>

@@ -172,3 +172,77 @@
     }
   }
 }
+
+.contact_container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  padding: 48px 0;
+  border-top: 1px solid #CDD0D4;
+
+  .title {
+    font-family: var(--font-roboto);
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    gap: 40px;
+
+    .infos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+
+      .image {
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.4));
+      }
+
+      .text_container {
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+
+        .title {
+          font-family: var(--font-kalam);
+          font-size: 20px;
+          font-weight: 400;
+          color: var(--purple-normal);
+          margin-bottom: 8px;
+        }
+
+        .subtitle {
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        .description {
+          color: #CDD0D4;
+          font-size: 16px;
+          line-height: 20px;
+          display: inline-block;
+
+          .email {
+            color: var(--purple-ligth);
+          }
+        }
+
+        .icons {
+          display: flex;
+          gap: 12px;
+
+          .icon {
+            padding: 8px;
+            background-color: var(--dark-blue-dark);
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+}

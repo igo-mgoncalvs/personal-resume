@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  
+  .title {
+    font-family: var(--font-kalam);
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    input, textarea {
+      background-color: var(--black-purple-dark);
+      outline: none;
+      border: none;
+      padding: 12px 8px;
+      border-radius: 8px;
+      font-family: var(--font-heebo);
+      font-size: 16px;
+      resize: none;
+      color: var(--withe)
+    }
+
+    textarea {
+      height: 118px;
+    }
+
+    button {
+      align-self: start;
+      font-size: 16px;
+      background-color: var(--purple-normal);
+      color: var(--withe);
+      border: none;
+      padding: 8px 20px;
+      border-radius: 8px;
+    }
+  }
+}
