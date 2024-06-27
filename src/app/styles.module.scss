@@ -102,3 +102,73 @@
     height: auto;
   }
 }
+
+.aboutMe {
+  background-color: var(--dark-blue-normal);
+  border-radius: 16px;
+  margin: 0 20px;
+  padding: 34px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+
+  .image {
+    width: 90%;
+    height: auto;
+  }
+
+  .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .icons_container {
+      display: flex;
+      gap: 14px;
+    }
+
+    .text_container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+
+      .title {
+        font-size: 16;
+        font-family: var(--font-roboto);
+        font-weight: bold;
+      }
+
+      .subtitle {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .description {
+        color: #CDD0D4;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+
+    .resume {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      background-color: var(--purple-normal);
+      outline: none;
+      border: none;
+      color: var(--basic-withe);
+      font-family: var(--font-heebo);
+      border-radius: 4px;
+      cursor: pointer;
+      align-self: flex-start;
+      
+      &:hover {
+        background-color: var(--purple-normal-hover);
+      }
+    }
+  }
+}

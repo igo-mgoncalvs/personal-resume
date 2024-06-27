@@ -16,5 +16,34 @@
         "label": "Get in touch"
       }
     ]
+  },
+
+  "aboutMe": {
+    "icons": [
+      {
+        "id": 0,
+        "iconName": "js"
+      },
+      {
+        "id": 1,
+        "iconName": "react"
+      },
+      {
+        "id": 2,
+        "iconName": "nodejs"
+      },
+      {
+        "id": 3,
+        "iconName": "android"
+      },
+      {
+        "id": 4,
+        "iconName": "apple"
+      }
+    ],
+    "title": "About me",
+    "subtitle": "I’m a passionate software developer looking for my first international oppotunity",
+    "description": "Beyond coding, I'm a coffee enthusiast, a cat lover, and a self-taught artist who enjoys spending my free time doodling. I am currently seeking opportunities to bring my skills and enthusiasm to a tech company in the United States or Europe and am excited about the prospect of relocating to pursue new challenges.",
+    "button": "My resume"
   }
 }
