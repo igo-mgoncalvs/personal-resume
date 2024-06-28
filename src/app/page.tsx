@@ -1,3 +1,5 @@
+
+
 import Image from 'next/image';
 
 import mockdata from '@/mockdata/mockdata.json'
@@ -42,6 +44,9 @@ export default function Home() {
       icon: apple,
     },
   ]
+  
+  const language = 'EN'
+  const getData = mockdata.languages.find(data => data.language === language)
 
   return (
     <main
@@ -60,7 +65,7 @@ export default function Home() {
             <p
               className={styles.name}
             >
-              {mockdata.home.name}
+              {getData?.home.name}
             </p>
 
             <div
@@ -69,19 +74,19 @@ export default function Home() {
               <p
                 className={styles.specialty}
               >
-                {mockdata.home.subtitle.specialty}
+                {getData?.home.subtitle.specialty}
               </p>
               <p
                 className={styles.description}
               >
-                {mockdata.home.subtitle.description}
+                {getData?.home.subtitle.description}
               </p>
             </div>
 
             <p
               className={styles.about}
             >
-              {mockdata.home.about}
+              {getData?.home.about}
             </p>
           </div>
 
@@ -97,14 +102,14 @@ export default function Home() {
               />
 
               <p>
-                {mockdata.home.buttons[0].label}
+                {getData?.home.buttons[0].label}
               </p>
             </button>
             <button
               className={styles.contact}
             >
               <p>
-                {mockdata.home.buttons[1].label}
+                {getData?.home.buttons[1].label}
               </p>
 
               <Image
@@ -140,7 +145,7 @@ export default function Home() {
           <div
             className={styles.icons_container}
           >
-            {mockdata.aboutMe.icons.map(item => (
+            {getData?.aboutMe.icons.map(item => (
               <Image
                 key={item.id}
                 src={icons.find(icon => icon.iconName === item.iconName)?.icon}
@@ -157,17 +162,17 @@ export default function Home() {
             <p
               className={styles.title}
             >
-              {mockdata.aboutMe.title}
+              {getData?.aboutMe.title}
             </p>
             <p
               className={styles.subtitle}
             >
-              {mockdata.aboutMe.subtitle}
+              {getData?.aboutMe.subtitle}
             </p>
             <p
               className={styles.description}
             >
-              {mockdata.aboutMe.description}
+              {getData?.aboutMe.description}
             </p>
           </div>
 
@@ -180,7 +185,7 @@ export default function Home() {
             />
 
             <p>
-              {mockdata.aboutMe.button}
+              {getData?.aboutMe.button}
             </p>
           </button>
         </div>
@@ -217,21 +222,21 @@ export default function Home() {
                 <p
                   className={styles.title}
                 >
-                  {mockdata.contact.title}
+                  {getData?.contact.title}
                 </p>
                 <p
                   className={styles.subtitle}
                 >
-                  {mockdata.contact.subtitle}
+                  {getData?.contact.subtitle}
                 </p>
               </div>
 
               <p
                 className={styles.description}
               >
-                {mockdata.contact.description1}
-                <b className={styles.email}> {mockdata.contact.email} </b>
-                {mockdata.contact.description2}
+                {getData?.contact.description1}
+                <b className={styles.email}> {getData?.contact.email} </b>
+                {getData?.contact.description2}
               </p>
 
               <div

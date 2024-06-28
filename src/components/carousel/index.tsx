@@ -105,6 +105,7 @@ export default function Carousel() {
       >
         {teste.map(item => (
           <SwiperSlide
+            key={item.id}
             className={styles.swiper_slide}
           >
             <Image

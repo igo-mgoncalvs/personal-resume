@@ -98,6 +98,7 @@ export default function Header () {
       <div className={styles.links_container}>
         {pages.map(item => (
           <Link
+            key={item.id}
             href={item.route}
             className={`${styles.link} ${currentRoute === item.route && styles.link_acive}`}
             onClick={() => setCurrentRoute(item.route)}
@@ -112,6 +113,7 @@ export default function Header () {
       >
         {languages.map(item => (
           <p
+            key={item.id}
             className={`${styles.language} ${language === item.language && styles.language_active}`}
             onClick={() => setLanguage(item.language)}
           >
