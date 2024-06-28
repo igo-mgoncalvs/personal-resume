@@ -1,5 +1,6 @@
+'use client'
 
-
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 import mockdata from '@/mockdata/mockdata.json'
@@ -45,8 +46,15 @@ export default function Home() {
     },
   ]
   
-  const language = 'EN'
+  const [language, setLanguage] = useState('EN')
   const getData = mockdata.languages.find(data => data.language === language)
+
+  useEffect(() => {
+    window.addEventListener('language', () => {
+      const getLanguage = localStorage.getItem('language')
+      setLanguage(getLanguage || 'EN')
+    })
+  }, [])
 
   return (
     <main

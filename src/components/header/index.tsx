@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Drawer } from '@mui/material'
 
@@ -14,30 +14,115 @@ export default function Header () {
   const [language, setLanguage] = useState<string>('EN')
   const [open, setOpen] = useState<boolean>(false)
 
+  useEffect(() => {
+    localStorage.setItem('language', language)
+    window.dispatchEvent(new Event("language"));
+  }, [language])
+
   const pages = [ 
     {
       id: 0,
-      name: 'Home',
+      languages: [
+        {
+          id: 0,
+          language: 'EN',
+          name: 'Home'
+        },
+        {
+          id: 1,
+          language: 'PT',
+          name: 'Home'
+        },
+        {
+          id: 1,
+          language: 'ES',
+          name: 'Home'
+        }
+      ],
       route: '#home'
     },
     {
       id: 1,
-      name: 'About',
+      languages: [
+        {
+          id: 0,
+          language: 'EN',
+          name: 'About',
+        },
+        {
+          id: 1,
+          language: 'PT',
+          name: 'Sobre mim',
+        },
+        {
+          id: 1,
+          language: 'ES',
+          name: 'Sobre mi',
+        }
+      ],
       route: '#about'
     },
     {
       id: 2,
-      name: 'Work Expirence',
+      languages: [
+        {
+          id: 0,
+          language: 'EN',
+          name: 'Work Expirence',
+        },
+        {
+          id: 1,
+          language: 'PT',
+          name: 'Experiência profissional',
+        },
+        {
+          id: 2,
+          language: 'ES',
+          name: 'Experiencia profesional',
+        }
+      ],
       route: '#work-expirence'
     },
     {
       id: 3,
-      name: 'Projects',
+      languages: [
+        {
+          id: 0,
+          language: 'EN',
+          name: 'Projects',
+        },
+        {
+          id: 1,
+          language: 'PT',
+          name: 'Projetos',
+        },
+        {
+          id: 2,
+          language: 'ES',
+          name: 'Proyectos',
+        }
+      ],
       route: '#projects'
     },
     {
       id: 4,
-      name: 'Contact',
+      languages: [
+        {
+          id: 0,
+          language: 'EN',
+          name: 'Contact',
+        },
+        {
+          id: 1,
+          language: 'PT',
+          name: 'Contato',
+        },
+        {
+          id: 2,
+          language: 'ES',
+          name: 'Contacto',
+        }
+      ],
       route: '#contact'
     },
   ]
@@ -45,11 +130,15 @@ export default function Header () {
   const languages = [
     {
       id: 0,
-      language: 'PT'
+      language: 'EN'
     },
     {
       id: 1,
-      language: 'EN'
+      language: 'PT'
+    },
+    {
+      id: 2,
+      language: 'ES'
     },
   ]
 
@@ -89,7 +178,7 @@ export default function Header () {
                 setOpen(false)
               }}
             >
-              {item.name}
+              {item.languages.find(e => e.language === language)?.name}
             </a>
           ))}
         </div>
@@ -103,7 +192,7 @@ export default function Header () {
             className={`${styles.link} ${currentRoute === item.route && styles.link_acive}`}
             onClick={() => setCurrentRoute(item.route)}
           >
-            {item.name}
+            {item.languages.find(e => e.language === language)?.name}
           </Link>
         ))}
 
