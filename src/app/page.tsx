@@ -52,10 +52,7 @@ export default function Home() {
     <main
       className={styles.main}
     >
-      <div
-        id='home'
-        className={styles.home}
-      >
+      <div id='home' className={styles.home}>
         <div
           className={styles.welcome}
         >
@@ -129,10 +126,7 @@ export default function Home() {
         />
       </div>
 
-      <div
-        id='about'
-        className={styles.aboutMe}
-      >
+      <div id='about' className={styles.aboutMe}>
         <Image
           alt='About me image'
           src={aboutMe}
@@ -150,6 +144,7 @@ export default function Home() {
                 key={item.id}
                 src={icons.find(icon => icon.iconName === item.iconName)?.icon}
                 alt={item.iconName}
+                className={styles.icon}
                 width={20}
                 height={20}
               />
@@ -193,10 +188,7 @@ export default function Home() {
 
       <Carousel />
 
-      <div
-        id='contact'
-        className={styles.contact_container}
-      >
+      <div id='contact' className={styles.contact_container} >
         <p
           className={styles.title}
         >

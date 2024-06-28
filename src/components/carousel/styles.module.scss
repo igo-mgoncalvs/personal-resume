@@ -25,7 +25,7 @@
     font-weight: bold;
     color: #fff;
     width: 280px;
-    height: 280px;
+    height: 224px;
     border-radius: 8px;
   }
 
@@ -68,6 +68,56 @@
       .openButton_text {
         font-size: 12px;
         text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 425px) {
+  .mySwiper{
+    max-width: 595px;
+
+    .swiper_slide {
+      width: 380px;
+      height: 280px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .mySwiper {
+    max-width: 804px;
+
+    .swiper_slide {
+      width: 480px;
+      height: 340px;
+    }
+
+    .info {
+
+      .title {
+        font-size: 24px;
+        padding: 0 30px;
+      }
+      
+      .description {
+        padding: 0 30px;
+        font-size: 16px;
+      }
+      
+      .openButton {
+        padding: 0 30px;
+        padding-bottom: 20px;
+
+        .icon {
+          width: 20px;
+          height: 20px;
+        }
+  
+        .openButton_text {
+          font-size: 16px;
+        }
       }
     }
   }

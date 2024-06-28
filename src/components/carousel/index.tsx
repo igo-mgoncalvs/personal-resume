@@ -96,8 +96,8 @@ export default function Carousel() {
           },
           768: {
             coverflowEffect: {
-              depth: 200,
-            }
+              depth: 350,
+            },
           }
         }}
         speed={500}
@@ -111,7 +111,6 @@ export default function Carousel() {
             <Image
               src={item.image}
               alt='imagem do projeto'
-              
               width={100}
               height={100}
               className={styles.image}
@@ -132,6 +131,7 @@ export default function Carousel() {
                   alt='teste'
                   width={16}
                   height={16}
+                  className={styles.icon}
                 />
                 <p className={styles.openButton_text}>Open</p>
               </a>

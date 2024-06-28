@@ -106,6 +106,20 @@ export default function Header () {
             {item.name}
           </Link>
         ))}
+
+      <div
+        className={styles.language_container_desk}
+      >
+        {languages.map(item => (
+          <p
+            key={item.id}
+            className={`${styles.language} ${language === item.language && styles.language_active}`}
+            onClick={() => setLanguage(item.language)}
+          >
+            {item.language}
+          </p>
+        ))}
+      </div>
       </div>
 
       <div
