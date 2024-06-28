@@ -16,6 +16,8 @@ import linkeding from '@/assets/linkeding.svg'
 
 import styles from './styles.module.scss'
 import Form from '@/components/from';
+import CarouselSlider from '@/components/carousel';
+import Carousel from '@/components/carousel';
 
 export default function Home() {
   const icons = [
@@ -182,6 +184,8 @@ export default function Home() {
           </button>
         </div>
       </div>
+
+      <Carousel />
 
       <div
         className={styles.contact_container}
