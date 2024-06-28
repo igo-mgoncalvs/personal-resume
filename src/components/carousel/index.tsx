@@ -18,41 +18,50 @@ export default function Carousel() {
   const teste = [
     {
       id: 1,
-      image: 'https://carousel-slider.uiinitiative.com/images/guardians-of-the-galaxy.jpg'
+      image: 'https://carousel-slider.uiinitiative.com/images/guardians-of-the-galaxy.jpg',
+      link: 'https://google.com'
     },
     {
       id: 2,
-      image: 'https://carousel-slider.uiinitiative.com/images/dr-strange.jpg'
+      image: 'https://carousel-slider.uiinitiative.com/images/dr-strange.jpg',
+      link: 'https://google.com'
     },
     {
       id: 3,
-      image: 'https://carousel-slider.uiinitiative.com/images/eternals.jpg'
+      image: 'https://carousel-slider.uiinitiative.com/images/eternals.jpg',
+      link: 'https://google.com'
     },
     {
       id: 4,
-      image: 'https://carousel-slider.uiinitiative.com/images/justice-league.jpg'
+      image: 'https://carousel-slider.uiinitiative.com/images/justice-league.jpg',
+      link: 'https://google.com'
     },
     {
       id: 5,
-      image: 'https://carousel-slider.uiinitiative.com/images/spider-man.jpg'
+      image: 'https://carousel-slider.uiinitiative.com/images/spider-man.jpg',
+      link: 'https://google.com'
     },
     {
       id: 6,
-      image: 'https://carousel-slider.uiinitiative.com/images/thor-ragnarok.jpg'
+      image: 'https://carousel-slider.uiinitiative.com/images/thor-ragnarok.jpg',
+      link: 'https://google.com'
     },
     {
       id: 7,
-      image: 'https://carousel-slider.uiinitiative.com/images/suicide-squad.jpg'
+      image: 'https://carousel-slider.uiinitiative.com/images/suicide-squad.jpg',
+      link: 'https://google.com'
     },
     {
       id: 8,
-      image: 'https://i.postimg.cc/nzzrycJ5/Frame-2.png'
+      image: 'https://i.postimg.cc/nzzrycJ5/Frame-2.png',
+      link: 'https://google.com'
     }
   ]
 
   return (
     <div
       className={styles.container}
+      id='projects'
     >
       <p className={styles.title}>Projects</p>
 
@@ -68,9 +77,9 @@ export default function Carousel() {
           nextEl: '',
           prevEl: '',
         }}
-        // autoplay={{
-        //   delay: 2000
-        // }}
+        autoplay={{
+          delay: 2000
+        }}
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         slidesPerView={'auto'}
         coverflowEffect={{
@@ -78,6 +87,18 @@ export default function Carousel() {
           stretch: 10,
           depth: 400,
           modifier: 2.5
+        }}
+        breakpoints={{
+          320: {
+            coverflowEffect: {
+              depth: 400,
+            }
+          },
+          768: {
+            coverflowEffect: {
+              depth: 200,
+            }
+          }
         }}
         speed={500}
         className={styles.mySwiper}
@@ -100,7 +121,9 @@ export default function Carousel() {
             >
               <p className={styles.title}>Ahuse</p>
               <p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-              <div
+              <a
+                href={item.link}
+                target='_blank'
                 className={styles.openButton}
               >
                 <Image
@@ -110,7 +133,7 @@ export default function Carousel() {
                   height={16}
                 />
                 <p className={styles.openButton_text}>Open</p>
-              </div>
+              </a>
             </div>
           </SwiperSlide>
         ))}
