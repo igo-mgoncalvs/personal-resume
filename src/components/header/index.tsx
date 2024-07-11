@@ -135,11 +135,7 @@ export default function Header () {
     {
       id: 1,
       language: 'PT'
-    },
-    {
-      id: 2,
-      language: 'ES'
-    },
+    }
   ]
 
   return (

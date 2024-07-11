@@ -66,66 +66,7 @@
         "name": "Olá, eu sou o Igor_",
         "subtitle": {
           "specialty": "Mobile e Web",
-          "description": "Desenvolvelor Front-End e entusiasta da inovação"
-        },
-        "about": "Durante meus 4 anos de experiencia na industria da técnologia. Me especializei em desenvolver soluções web e mobile usando técnologias como React, React Native e Node.js.",
-        "buttons": [
-          {
-            "id": 0,
-            "label": "Meu curriculo"
-          },
-          {
-            "id": 1,
-            "label": "Entre em contato"
-          }
-        ]
-      },
-    
-      "aboutMe": {
-        "icons": [
-          {
-            "id": 0,
-            "iconName": "js"
-          },
-          {
-            "id": 1,
-            "iconName": "react"
-          },
-          {
-            "id": 2,
-            "iconName": "nodejs"
-          },
-          {
-            "id": 3,
-            "iconName": "android"
-          },
-          {
-            "id": 4,
-            "iconName": "apple"
-          }
-        ],
-        "title": "Sobre mim",
-        "subtitle": "Sou um amante do desenvolvimento de software, em busca da minha primeira oportunidade internacional",
-        "description": "Beyond coding, I'm a coffee enthusiast, a cat lover, and a self-taught artist who enjoys spending my free time doodling. I am currently seeking opportunities to bring my skills and enthusiasm to a tech company in the United States or Europe and am excited about the prospect of relocating to pursue new challenges.",
-        "button": "Meu curriculo"
-      },
-    
-      "contact": {
-        "title": "Contato",
-        "subtitle": "Gostou do meu trabalho? Então vamos inovar juntos",
-        "description1": "Estou sempre disponivel para uma conversa. Envie-me um e-mail em",
-        "description2": "ou entre em contato pelas minhas redes sociais.",
-        "email": "igor2013mgoncalves@gmail.com"
-      }
-    },
-    {
-      "id": 1,
-      "language": "ES",
-      "home": {
-        "name": "Olá, me llamo Igor_",
-        "subtitle": {
-          "specialty": "Mobile e Web",
-          "description": "Desenvolvelor Front-End e entusiasta da inovação"
+          "description": "Desenvolvedor Front-End e entusiasta da inovação"
         },
         "about": "Durante meus 4 anos de experiencia na industria da técnologia. Me especializei em desenvolver soluções web e mobile usando técnologias como React, React Native e Node.js.",
         "buttons": [
