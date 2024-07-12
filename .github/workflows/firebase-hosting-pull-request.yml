@@ -11,9 +11,9 @@ jobs:
       - uses: actions/checkout@v3
       - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
         with:
-          env:
-            FIREBASE_CLI_EXPERIMENTS: webframeworks
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PORTFOLIO_3206E }}'
           projectId: portfolio-3206e
