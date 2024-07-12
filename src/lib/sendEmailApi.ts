@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const sendEmailApi = axios.create({
-  baseURL: process.env.sendEmailApi,
+  baseURL: 'https://imgor-server-v2.uc.r.appspot.com',
 })
