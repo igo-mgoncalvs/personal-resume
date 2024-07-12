@@ -50,6 +50,41 @@
         "description": "Beyond coding, I'm a coffee enthusiast, a cat lover, and a self-taught artist who enjoys spending my free time doodling. I am currently seeking opportunities to bring my skills and enthusiasm to a tech company in the United States or Europe and am excited about the prospect of relocating to pursue new challenges.",
         "button": "My resume"
       },
+
+      "projects": [
+        {
+          "id": 1,
+          "image": "https://i.postimg.cc/XYb6YVPB/Local-e-data.png",
+          "projectLink": "https://journey.igormgoncalvs.com",
+          "githubLink": "https://github.com/igo-mgoncalvs/nlw-journey-frontend",
+          "name": "Plann.er",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+        },
+        {
+          "id": 2,
+          "image": "https://i.postimg.cc/kGzNmQQr/Captura-de-tela-2024-07-12-100502.png",
+          "projectLink": "https://medicallfarma.com.br",
+          "githubLink": "https://github.com/igo-mgoncalvs/medicall-farma-web",
+          "name": "Medicall Farma",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+        },
+        {
+          "id": 3,
+          "image": "https://i.postimg.cc/L4V4q9wP/Captura-de-tela-2024-07-12-095815.png",
+          "projectLink": "https://igrejanoah.com",
+          "githubLink": "https://github.com/igo-mgoncalvs/site-noah",
+          "name": "Igreja No'ah",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+        },
+        {
+          "id": 4,
+          "image": "https://i.postimg.cc/hP4NPxHk/Captura-de-tela-2024-07-12-100651.png",
+          "projectLink": "https://imgorferramentas.com",
+          "githubLink": "https://github.com/igo-mgoncalvs/imgor",
+          "name": "Imgor Ferramentas",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+        }
+      ],
     
       "contact": {
         "title": "Contact",
@@ -109,6 +144,41 @@
         "description": "Beyond coding, I'm a coffee enthusiast, a cat lover, and a self-taught artist who enjoys spending my free time doodling. I am currently seeking opportunities to bring my skills and enthusiasm to a tech company in the United States or Europe and am excited about the prospect of relocating to pursue new challenges.",
         "button": "Meu curriculo"
       },
+
+      "projects": [
+        {
+          "id": 1,
+          "image": "https://i.postimg.cc/XYb6YVPB/Local-e-data.png",
+          "projectLink": "https://journey.igormgoncalvs.com",
+          "githubLink": "https://github.com/igo-mgoncalvs/nlw-journey-frontend",
+          "name": "Plann.er",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+        },
+        {
+          "id": 2,
+          "image": "https://i.postimg.cc/kGzNmQQr/Captura-de-tela-2024-07-12-100502.png",
+          "projectLink": "https://medicallfarma.com.br",
+          "githubLink": "https://github.com/igo-mgoncalvs/medicall-farma-web",
+          "name": "Medicall Farma",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+        },
+        {
+          "id": 3,
+          "image": "https://i.postimg.cc/L4V4q9wP/Captura-de-tela-2024-07-12-095815.png",
+          "projectLink": "https://igrejanoah.com",
+          "githubLink": "https://github.com/igo-mgoncalvs/site-noah",
+          "name": "Igreja No'ah",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+        },
+        {
+          "id": 4,
+          "image": "https://i.postimg.cc/hP4NPxHk/Captura-de-tela-2024-07-12-100651.png",
+          "projectLink": "https://imgorferramentas.com",
+          "githubLink": "https://github.com/igo-mgoncalvs/imgor",
+          "name": "Imgor Ferramentas",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros."
+        }
+      ],
     
       "contact": {
         "title": "Contato",

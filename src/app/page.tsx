@@ -17,10 +17,11 @@ import photo from '@/assets/Photo.png'
 import github from '@/assets/github.svg'
 import linkeding from '@/assets/linkeding.svg'
 
-import Form from '@/components/from'
+import Form from '@/components/form'
 import Carousel from '@/components/carousel'
 
 import styles from './styles.module.scss'
+import { ToastContainer } from 'react-toastify';
 
 export default function Home() {
   const icons = [
@@ -60,6 +61,7 @@ export default function Home() {
     <main
       className={styles.main}
     >
+      <ToastContainer />
       <div id='home' className={styles.home}>
         <div
           className={styles.welcome}

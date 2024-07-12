@@ -11,6 +11,9 @@ const nextConfig = {
       },
     ],
   },
+  env: {
+    sendEmailApi: process.env.SEND_EMAIL_API,
+  }
 };
 
 export default nextConfig;

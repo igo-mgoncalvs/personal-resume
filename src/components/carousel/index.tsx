@@ -1,62 +1,32 @@
 'use client'
 
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Navigation, Autoplay } from 'swiper/modules';
 import Image from 'next/image';
 
 import open from '@/assets/open.svg'
+import github from '@/assets/github.svg'
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
+import mockdata from '@/mockdata/mockdata.json'
+
 import styles from './styles.module.scss';
 
 export default function Carousel() {
-  const teste = [
-    {
-      id: 1,
-      image: 'https://carousel-slider.uiinitiative.com/images/guardians-of-the-galaxy.jpg',
-      link: 'https://google.com'
-    },
-    {
-      id: 2,
-      image: 'https://carousel-slider.uiinitiative.com/images/dr-strange.jpg',
-      link: 'https://google.com'
-    },
-    {
-      id: 3,
-      image: 'https://carousel-slider.uiinitiative.com/images/eternals.jpg',
-      link: 'https://google.com'
-    },
-    {
-      id: 4,
-      image: 'https://carousel-slider.uiinitiative.com/images/justice-league.jpg',
-      link: 'https://google.com'
-    },
-    {
-      id: 5,
-      image: 'https://carousel-slider.uiinitiative.com/images/spider-man.jpg',
-      link: 'https://google.com'
-    },
-    {
-      id: 6,
-      image: 'https://carousel-slider.uiinitiative.com/images/thor-ragnarok.jpg',
-      link: 'https://google.com'
-    },
-    {
-      id: 7,
-      image: 'https://carousel-slider.uiinitiative.com/images/suicide-squad.jpg',
-      link: 'https://google.com'
-    },
-    {
-      id: 8,
-      image: 'https://i.postimg.cc/nzzrycJ5/Frame-2.png',
-      link: 'https://google.com'
-    }
-  ]
+  const [language, setLanguage] = useState('EN')
+  const getData = mockdata.languages.find(data => data.language === language)
+
+  useEffect(() => {
+    window.addEventListener('language', () => {
+      const getLanguage = localStorage.getItem('language')
+      setLanguage(getLanguage || 'EN')
+    })
+  }, [])
 
   return (
     <div
@@ -78,7 +48,7 @@ export default function Carousel() {
           prevEl: '',
         }}
         autoplay={{
-          delay: 2000
+          delay: 5000
         }}
         modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         slidesPerView={'auto'}
@@ -103,38 +73,53 @@ export default function Carousel() {
         speed={500}
         className={styles.mySwiper}
       >
-        {teste.map(item => (
+        {getData?.projects.map(item => (
           <SwiperSlide
             key={item.id}
             className={styles.swiper_slide}
           >
-            <Image
+            <img
               src={item.image}
               alt='imagem do projeto'
-              width={100}
-              height={100}
               className={styles.image}
             />
 
             <div
               className={styles.info}
             >
-              <p className={styles.title}>Ahuse</p>
-              <p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-              <a
-                href={item.link}
-                target='_blank'
-                className={styles.openButton}
-              >
-                <Image
-                  src={open}
-                  alt='teste'
-                  width={16}
-                  height={16}
-                  className={styles.icon}
-                />
-                <p className={styles.openButton_text}>Open</p>
-              </a>
+              <p className={styles.title}>{item.name}</p>
+              <p className={styles.description}>{item.description}</p>
+              <div className={styles.linksButtons}>
+                <a
+                  href={item.projectLink}
+                  target='_blank'
+                  className={styles.openButton}
+                >
+                  <Image
+                    src={open}
+                    alt='open icon'
+                    width={16}
+                    height={16}
+                    className={styles.icon}
+                  />
+                  <p className={styles.openButton_text}>Open</p>
+                </a>
+
+                <a
+                  href={item.githubLink}
+                  target='_blank'
+                  className={styles.openButton}
+                >
+                  <Image
+                    src={github}
+                    alt='github icon'
+                    width={16}
+                    height={16}
+                    className={styles.icon}
+                  />
+                  <p className={styles.openButton_text}>Github</p>
+                </a>
+              </div>
             </div>
           </SwiperSlide>
         ))}

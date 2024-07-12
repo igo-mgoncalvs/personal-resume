@@ -57,19 +57,25 @@
       padding: 0 14px;
     }
 
-    .openButton {
+    .linksButtons {
       display: flex;
-      align-items: center;
-      gap: 4px;
       padding: 0px 14px 14px 16px;
-      cursor: pointer;
-      color: var(--white);
+      gap: 16px;
 
-      .openButton_text {
-        font-size: 12px;
-        text-decoration: underline;
+      .openButton {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+        color: var(--white);
+  
+        .openButton_text {
+          font-size: 12px;
+          text-decoration: underline;
+        }
       }
     }
+
   }
 }
 
@@ -105,20 +111,24 @@
         padding: 0 30px;
         font-size: 16px;
       }
-      
-      .openButton {
+
+      .linksButtons {
         padding: 0 30px;
         padding-bottom: 20px;
 
-        .icon {
-          width: 20px;
-          height: 20px;
-        }
+        .openButton {
   
-        .openButton_text {
-          font-size: 16px;
+          .icon {
+            width: 20px;
+            height: 20px;
+          }
+    
+          .openButton_text {
+            font-size: 16px;
+          }
         }
       }
+      
     }
   }
 }
