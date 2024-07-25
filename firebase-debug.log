@@ -1,0 +1,19 @@
+[debug] [2024-07-25T13:25:17.820Z] ----------------------------------------------------------------------
+[debug] [2024-07-25T13:25:17.927Z] Command:       C:\Users\igor.moreira\.nvm\versions\node\v20.11.0\bin\node.exe C:\Users\igor.moreira\.nvm\versions\node\v20.11.0\bin\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-07-25T13:25:17.928Z] CLI Version:   13.1.0
+[debug] [2024-07-25T13:25:17.928Z] Platform:      win32
+[debug] [2024-07-25T13:25:17.928Z] Node Version:  v20.11.0
+[debug] [2024-07-25T13:25:17.936Z] Time:          Thu Jul 25 2024 10:25:17 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2024-07-25T13:25:17.939Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-25T13:25:18.133Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-25T13:25:18.134Z] > authorizing via signed-in user (igor2013mgoncalves@gmail.com)
+[debug] [2024-07-25T13:25:18.134Z] [iam] checking project portfolio-3206e for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-07-25T13:25:18.138Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-3206e:testIamPermissions [none]
+[debug] [2024-07-25T13:25:18.138Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-3206e:testIamPermissions x-goog-quota-user=projects/portfolio-3206e
+[debug] [2024-07-25T13:25:18.138Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-3206e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-25T13:25:19.615Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-3206e:testIamPermissions 200
+[debug] [2024-07-25T13:25:19.616Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-3206e:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-07-25T13:25:19.618Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-3206e [none]
+[debug] [2024-07-25T13:25:20.096Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-3206e 200
+[debug] [2024-07-25T13:25:20.096Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-3206e {"projectId":"portfolio-3206e","projectNumber":"430697127705","displayName":"Portfolio","name":"projects/portfolio-3206e","resources":{"hostingSite":"portfolio-3206e"},"state":"ACTIVE","etag":"1_b9305ad2-3d08-42cd-bc5d-087de4d794d6"}

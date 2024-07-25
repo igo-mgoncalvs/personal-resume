@@ -100,7 +100,8 @@ export default function Home() {
           <div
             className={styles.buttons_container}
           >
-            <button
+            <a
+              href='gigamaisfibra://negociacao'
               className={styles.resume}
             >
               <Image
@@ -111,7 +112,7 @@ export default function Home() {
               <p>
                 {getData?.home.buttons[0].label}
               </p>
-            </button>
+            </a>
             <button
               className={styles.contact}
             >
