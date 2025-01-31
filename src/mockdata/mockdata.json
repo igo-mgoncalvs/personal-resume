@@ -13,7 +13,8 @@
         "buttons": [
           {
             "id": 0,
-            "label": "My resume"
+            "label": "My resume",
+            "link": "https://drive.google.com/file/d/14JEnYPYsyx6aMFTZsxT3kxijorJQqXF_/view"
           },
           {
             "id": 1,
@@ -117,7 +118,8 @@
         "buttons": [
           {
             "id": 0,
-            "label": "Meu curriculo"
+            "label": "Meu curriculo",
+            "link": "https://drive.google.com/file/d/14JEnYPYsyx6aMFTZsxT3kxijorJQqXF_/view"
           },
           {
             "id": 1,

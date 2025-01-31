@@ -101,7 +101,8 @@ export default function Home() {
             className={styles.buttons_container}
           >
             <a
-              href='gigamaisfibra://negociacao'
+              href={getData?.home.buttons[0].link}
+              target='_blank'
               className={styles.resume}
             >
               <Image
