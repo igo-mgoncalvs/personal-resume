@@ -113,8 +113,9 @@ export default function Home() {
                 {getData?.home.buttons[0].label}
               </p>
             </a>
-            <button
+            <a
               className={styles.contact}
+              href='#contact'
             >
               <p>
                 {getData?.home.buttons[1].label}
@@ -124,7 +125,7 @@ export default function Home() {
                 src={arrow}
                 alt='contact image'
               />
-            </button>
+            </a>
           </div>
         </div>
 
@@ -203,7 +204,7 @@ export default function Home() {
         <p
           className={styles.title}
         >
-          Contact
+          {getData?.contact.title}
         </p>
 
         <div
@@ -245,16 +246,26 @@ export default function Home() {
               <div
                 className={styles.icons}
               >
-                <Image
-                  alt='github'
-                  src={github}
-                  className={styles.icon}
-                />
-                <Image
-                  alt='linkeding'
-                  src={linkeding}
-                  className={styles.icon}
-                />
+                <a
+                  href='https://github.com/igo-mgoncalvs'
+                  target='_blank'
+                >
+                  <Image
+                    alt='github'
+                    src={github}
+                    className={styles.icon}
+                  />
+                </a>
+                <a
+                  href='https://www.linkedin.com/in/igor-gon%C3%A7alves-711571221/'
+                  target='_blank'
+                >
+                  <Image
+                    alt='linkeding'
+                    src={linkeding}
+                    className={styles.icon}
+                  />
+                </a>
               </div>
             </div>
           </div>

@@ -7,6 +7,8 @@ import Image from 'next/image';
 
 import open from '@/assets/open.svg'
 import github from '@/assets/github.svg'
+import android from '@/assets/android.svg'
+import apple from '@/assets/apple.svg'
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
@@ -33,7 +35,7 @@ export default function Carousel() {
       className={styles.container}
       id='projects'
     >
-      <p className={styles.title}>Projects</p>
+      <p className={styles.title}>{getData?.projects.title}</p>
 
       <Swiper
         effect={'coverflow'}
@@ -73,7 +75,7 @@ export default function Carousel() {
         speed={500}
         className={styles.mySwiper}
       >
-        {getData?.projects.map(item => (
+        {getData?.projects.list.map(item => (
           <SwiperSlide
             key={item.id}
             className={styles.swiper_slide}
@@ -90,35 +92,73 @@ export default function Carousel() {
               <p className={styles.title}>{item.name}</p>
               <p className={styles.description}>{item.description}</p>
               <div className={styles.linksButtons}>
-                <a
-                  href={item.projectLink}
-                  target='_blank'
-                  className={styles.openButton}
-                >
-                  <Image
-                    src={open}
-                    alt='open icon'
-                    width={16}
-                    height={16}
-                    className={styles.icon}
-                  />
-                  <p className={styles.openButton_text}>Open</p>
-                </a>
+                {item.projectPlaystore && (
+                  <a
+                    href={item.projectPlaystore}
+                    target='_blank'
+                    className={styles.openButton}
+                  >
+                    <Image
+                      src={android}
+                      alt='open icon'
+                      width={16}
+                      height={16}
+                      className={styles.icon}
+                    />
+                    <p className={styles.openButton_text}>Open</p>
+                  </a>
+                )}
 
-                <a
-                  href={item.githubLink}
-                  target='_blank'
-                  className={styles.openButton}
-                >
-                  <Image
-                    src={github}
-                    alt='github icon'
-                    width={16}
-                    height={16}
-                    className={styles.icon}
-                  />
-                  <p className={styles.openButton_text}>Github</p>
-                </a>
+                {item.projectAppstore && (
+                  <a
+                    href={item.projectAppstore}
+                    target='_blank'
+                    className={styles.openButton}
+                  >
+                    <Image
+                      src={apple}
+                      alt='open icon'
+                      width={16}
+                      height={16}
+                      className={styles.icon}
+                    />
+                    <p className={styles.openButton_text}>Open</p>
+                  </a>
+                )}
+
+                {item.projectLink && (
+                  <a
+                    href={item.projectLink}
+                    target='_blank'
+                    className={styles.openButton}
+                  >
+                    <Image
+                      src={open}
+                      alt='open icon'
+                      width={16}
+                      height={16}
+                      className={styles.icon}
+                    />
+                    <p className={styles.openButton_text}>Open</p>
+                  </a>
+                )}
+
+                {item.githubLink && (
+                  <a
+                    href={item.githubLink}
+                    target='_blank'
+                    className={styles.openButton}
+                  >
+                    <Image
+                      src={github}
+                      alt='github icon'
+                      width={16}
+                      height={16}
+                      className={styles.icon}
+                    />
+                    <p className={styles.openButton_text}>Github</p>
+                  </a>
+                )}
               </div>
             </div>
           </SwiperSlide>

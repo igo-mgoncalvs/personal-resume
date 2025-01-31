@@ -1,11 +1,15 @@
 'use client'
 
 import { Controller, useForm } from 'react-hook-form'
-
-import styles from './styles.module.scss'
-import { sendEmailApi } from '@/lib/sendEmailApi'
-import 'react-toastify/dist/ReactToastify.css'
 import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
+import { sendEmailApi } from '@/lib/sendEmailApi'
+
+import mockdata from '@/mockdata/mockdata.json'
+import styles from './styles.module.scss'
+import { useEffect, useState } from 'react'
+
 
 interface IForm {
   name: string
@@ -15,6 +19,17 @@ interface IForm {
 
 export default function Form () {
   const { control, handleSubmit, setValue } = useForm<IForm>()
+  const [language, setLanguage] = useState('EN')
+  
+
+  const getData = mockdata.languages.find(data => data.language === language)
+
+  useEffect(() => {
+    window.addEventListener('language', () => {
+      const getLanguage = localStorage.getItem('language')
+      setLanguage(getLanguage || 'EN')
+    })
+  }, [])
 
   const onSubmit = (data: IForm) => {
     toast.info('Aguarde um momento', {
@@ -66,7 +81,7 @@ export default function Form () {
       <p
         className={styles.title}
       >
-        Send me a message
+        {getData?.contact.form.title}
       </p>
 
       <form
@@ -84,7 +99,7 @@ export default function Form () {
           }}
           render={({field: { onChange, value }}) => (
             <input
-              placeholder='Name'
+              placeholder={getData?.contact.form.name}
               value={value}
               onChange={onChange}
             />
@@ -101,7 +116,7 @@ export default function Form () {
           }}
           render={({field: { onChange, value }}) => (
             <input
-              placeholder='E-mail'
+              placeholder={getData?.contact.form.email}
               value={value}
               onChange={onChange}
             />
@@ -114,13 +129,13 @@ export default function Form () {
             <textarea
               onChange={onChange}
               value={value}
-              placeholder='Your message'
+              placeholder={getData?.contact.form.message}
             />
           )}
         />
 
         <button>
-          Contact me
+          {getData?.contact.form.button}
         </button>
       </form>
     </div>

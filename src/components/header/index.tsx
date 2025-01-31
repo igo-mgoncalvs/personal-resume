@@ -68,27 +68,6 @@ export default function Header () {
         {
           id: 0,
           language: 'EN',
-          name: 'Work Expirence',
-        },
-        {
-          id: 1,
-          language: 'PT',
-          name: 'Experiência profissional',
-        },
-        {
-          id: 2,
-          language: 'ES',
-          name: 'Experiencia profesional',
-        }
-      ],
-      route: '#work-expirence'
-    },
-    {
-      id: 3,
-      languages: [
-        {
-          id: 0,
-          language: 'EN',
           name: 'Projects',
         },
         {
@@ -105,7 +84,7 @@ export default function Header () {
       route: '#projects'
     },
     {
-      id: 4,
+      id: 3,
       languages: [
         {
           id: 0,
